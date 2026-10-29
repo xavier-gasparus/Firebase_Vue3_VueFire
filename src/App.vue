@@ -1,11 +1,25 @@
-<script setup lang="ts"></script>
+<script setup>
+import { RouterView, useRoute } from 'vue-router'
+import AppNavbar from './components/AppNavbar.vue'
+import AppLayout from './layouts/AppLayout.vue'
+
+const route = useRoute()
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <AppLayout>
+    <template v-slot:topbar>
+      <AppNavbar />
+    </template>
+    <template v-slot:content>
+      <Suspense>
+        <RouterView :key="route.fullPath" />
+        <template v-slot:fallback>
+          <p>Content not found. Contact your developer for more info.</p>
+        </template>
+      </Suspense>
+    </template>
+  </AppLayout>
 </template>
 
-<style scoped></style>
+<style></style>

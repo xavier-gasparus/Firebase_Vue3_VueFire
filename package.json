@@ -15,10 +15,12 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
+    "@mdi/font": "^7.1.96",
     "firebase": "^12.19.0",
     "vue": "^3.5.42",
     "vue-router": "^5.3.1",
-    "vuefire": "^3.2.3"
+    "vuefire": "^3.2.3",
+    "vuetify": "^3.3.0"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.5",
