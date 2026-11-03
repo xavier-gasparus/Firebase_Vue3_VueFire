@@ -1,6 +1,6 @@
 # firebase-with-vue
 
-This template should help get you started developing with Vue 3 in Vite.
+Firebase with Vue 3 and VueFire.
 
 ## Recommended IDE Setup
 
